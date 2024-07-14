@@ -74,7 +74,7 @@ WSGI_APPLICATION = 'comment_django.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
-if os.getenv('DJANGO_DEBUG', '1') == '0':
+if os.getenv('DEVELOPMENT_MODE', '1') == '0':
     DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.postgresql',
